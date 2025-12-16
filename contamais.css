@@ -1,0 +1,211 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #000; /* Fundo escuro */
+  color: #fff; /* Texto branco para contraste */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header com logo e navegação */
+header {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333; /* Cinza escuro um pouco mais claro que o fundo */
+}
+
+.logo img {
+  height: 70px; /* Ajuste o tamanho da logo */
+  margin-right: 20px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: rgb(121, 1, 1); /* Destaque no hover */
+}
+
+.slider {
+  width: 100%;
+  max-width: 800px;
+  margin-top: 100px;
+  margin: 0 auto 30px;
+  padding-top: 40px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.slides {
+  display: flex;
+  width: 500%;
+  animation: slide 15s infinite;
+}
+
+.slides img {
+  width: 50%;
+  height: 350px; /* Altura fixa */
+  object-fit: cover;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateX(0);
+  }
+  20% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-20%);
+  }
+  45% {
+    transform: translateX(-20%);
+  }
+  50% {
+    transform: translateX(-40%);
+  }
+  70% {
+    transform: translateX(-40%);
+  }
+  75% {
+    transform: translateX(-60%);
+  }
+  95% {
+    transform: translateX(-60%);
+  }
+  100% {
+    transform: translateX(-80%);
+  }
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #fff;
+}
+
+#doramaForm {
+  max-width: 600px;
+  margin: 0 auto 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+#doramaForm input,
+#doramaForm textarea {
+  padding: 10px;
+  border: 1px solid #555;
+  border-radius: 5px;
+  background-color: #222;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+}
+
+#doramaForm textarea {
+  resize: vertical;
+}
+
+#doramaForm button {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #2c2d2f;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
+
+#doramaForm button:hover {
+  background-color: #1a1b1b;
+}
+
+#cancelEdit {
+  display: none;
+}
+
+#doramaTable {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background-color: #222;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+#doramaTable th,
+#doramaTable td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #555;
+}
+
+#doramaTable th {
+  background-color: #333;
+  font-weight: 700;
+}
+
+#doramaTable td {
+  background-color: #111;
+}
+.miniatura {
+  max-width: 100px;
+  max-height: 100px;
+  object-fit: cover;
+  border-radius: 3px;
+}
+
+.edit-btn,
+.delete-btn {
+  padding: 5px 10px;
+  margin-right: 5px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-family: "Roboto", sans-serif;
+}
+
+.edit-btn {
+  background-color: #ffc107;
+  color: #000;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: #fff;
+}
+
+.edit-btn:hover {
+  background-color: #e0a800;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color:#333;
+}

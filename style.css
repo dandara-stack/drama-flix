@@ -1,0 +1,105 @@
+/* Fundo escuro para o corpo da página */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #000; /* Fundo escuro */
+  color: #fff; /* Texto branco para contraste */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header com logo e navegação */
+header {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333; /* Cinza escuro um pouco mais claro que o fundo */
+}
+
+.logo img {
+  height: 70px; /* Ajuste o tamanho da logo */
+  margin-right: 20px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: #f5f3f3;
+  text-decoration: none;
+  padding: 10px;
+  transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: rgb(121, 1, 1); /* Destaque no hover */
+}
+p {
+  display: flex;
+  text-align: justify;
+  justify-content: center;
+}
+h1 {
+  font-family: segoe script font;
+}
+a {
+  text-decoration: none;
+}
+
+/* Layout principal com laterais */
+main {
+  display: flex;
+  flex: 1;
+  padding: 20px;
+}
+
+.sidebar-left,
+.sidebar-right {
+  width: 200px; /* Largura das laterais */
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Espaço entre imagens */
+}
+
+.sidebar-left {
+  margin-right: 20px;
+}
+
+.sidebar-right {
+  margin-left: 20px;
+}
+
+.sidebar-left img,
+.sidebar-right img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px; /* Bordas arredondadas opcionais */
+}
+
+.content {
+  flex: 1;
+  text-align: center;
+}
+a {
+  color: #fff;
+}
+/* Footer */
+footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #333;
+}
+
+.miniatura {
+  max-width: 60px;
+}

@@ -1,0 +1,191 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #000; /* Fundo escuro */
+  color: #fff; /* Texto branco para contraste */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Header com logo e navegação */
+header {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333; /* Cinza escuro um pouco mais claro que o fundo */
+}
+
+.logo img {
+  height: 70px; /* Ajuste o tamanho da logo */
+  margin-right: 20px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: #fbfbfb;
+  text-decoration: none;
+  padding: 10px;
+  transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: rgb(121, 1, 1); /* Destaque no hover */
+}
+
+/* Tabela de Doramas */
+
+#doramaTable {
+  width: 95%;
+  margin: 2rem 2rem 2rem 1rem; /* Margem esquerda reduzida para mover mais à esquerda */
+  border-collapse: collapse;
+  background-color: #222; /* Mantido consistente com o tema escuro */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 0.9rem;
+}
+
+#doramaTable thead {
+  background: linear-gradient(135deg, #23282b, #393c3d);
+  color: white;
+}
+
+#doramaTable th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 0.8rem;
+}
+
+#doramaTable tbody tr {
+  border-bottom: 1px solid #ecf0f1;
+  transition: background-color 0.3s ease;
+}
+
+#doramaTable tbody tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+#doramaTable tbody tr:hover {
+  background-color: #e8f4fc;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#doramaTable td {
+  padding: 1rem;
+  vertical-align: middle;
+}
+
+/* Estilização para as notas */
+#doramaTable td:nth-child(3) {
+  font-weight: bold;
+  color: #e74c3c;
+  font-size: 1.1rem;
+}
+
+/* Estilização para as avaliações */
+#doramaTable td:nth-child(4) {
+  color: #7f8c8d;
+  font-style: italic;
+}
+
+/* Botões de ação */
+#doramaTable td:last-child {
+  text-align: center;
+}
+.edit-btn {
+  display: none;
+}
+
+#doramaTable button {
+  background-color: #b40808ae;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 0.8rem;
+  margin: 0 2px;
+}
+
+#doramaTable button:hover {
+  background-color: #171819;
+  transform: translateY(-1px);
+}
+
+#doramaTable button.delete {
+  background-color: #e74c3c;
+}
+
+#doramaTable button.delete:hover {
+  background-color: #c0392b;
+}
+
+/* Audio Player */
+.elfsight-app-e3aa045f-6e54-4386-bf84-4fabdd6ff84e {
+  margin: 2rem auto;
+  max-width: 95%;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  header {
+    padding: 1rem;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  #doramaTable {
+    font-size: 0.8rem;
+  }
+
+  #doramaTable th,
+  #doramaTable td {
+    padding: 0.5rem;
+  }
+
+  #doramaTable thead {
+    display: none;
+  }
+
+  #doramaTable tbody tr {
+    display: block;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+
+  #doramaTable td {
+    display: block;
+    text-align: right;
+    border-bottom: 1px solid #eee;
+  }
+
+  #doramaTable td::before {
+    content: attr(data-label);
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/contamais.css">
+  <link rel="stylesheet" href="/pag/dramas.css">
+  <title>DramaFlix</title>
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img src="/img/logodrama-removebg-preview.png" alt="Logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="/pag/index.html">Home</a></li>
+        <li><a href="/contamais.html">Conta Mais</a></li>
+      </ul>
+    </nav>
+    <div class="search-bar">
+      <form action="/search" method="get">
+        <input type="text" name="query" placeholder="Buscar dramas coreanos...">
+        <button type="submit">Buscar</button>
+      </form>
+    </div>
+  </header>
+
+ <table id="doramaTable">
+  <thead>
+    <tr>
+      <th>Usuário</th>
+      <th>Dorama</th>
+      <th>Nota</th>
+      <th>Avaliação</th>
+      <th>Ações</th>
+      <th>Imagem</th>  <!-- Adicione este cabeçalho para a coluna da imagem -->
+    </tr>
+  </thead>
+  <tbody id="doramaTableBody"></tbody>
+</table>
+
+
+ 
+  <script src="https://elfsightcdn.com/platform.js" async></script>
+  <div class="elfsight-app-e3aa045f-6e54-4386-bf84-4fabdd6ff84e" data-elfsight-app-lazy></div>
+</body>
+<script src="/script.js"> loadDoramas()</script>
+<script>
+  loadDoramas();
+</script>
+
+
+</html>
